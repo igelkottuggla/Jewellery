@@ -1,0 +1,48 @@
+$white: #ffffff;
+$dark-grey: #1d1613;
+$light-grey: #9b9997;
+$basic-golden: #a87b62;
+$basic-black: #000000;
+$basic-beige: #f0eae4;
+$special-light-grey: #f6f5f4;
+
+/* Text colors */
+$black-text: $basic-black;
+$white-text: $white;
+$dark-grey-text: $light-grey;
+
+/* BG colors */
+$primary-beige-bg: $basic-beige;
+$primary-white-color: $white;
+$primary-golden-bg: $basic-golden;
+$border-grey-color: $special-light-grey;
+$border-golden-color: $basic-golden;
+
+/*Fonts*/
+$main-f: "poppins-medium", "Arial", "Helvetica", sans-serif;
+$plain-text-f: "poppins-regular", "Arial", "Helvetica", sans-serif;
+$f-bold: "poppins-bold", "Arial", "Helvetica", sans-serif;
+$f-accent-regular: "cormorantgaramond-regular", "Arial", "Helvetica", sans-serif;
+$f-accent-semi-bold: "cormorantgaramond-semibold", "Arial", "Helvetica",
+  sans-serif;
+$f-accent-bold: "cormorantgaramond-bold", "Arial", "Helvetica", sans-serif;
+
+/* Font weight */
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/* Font style */
+$font-style-normal: normal;
+$font-style-italic: italic;
+
+/* Sizes and breakpoints*/
+$phones-min: 320px;
+$phones-max: 767px;
+$tablets-min: 768px;
+$tablets-max: 1023px;
+$desktops: 1024px;
+
+/* Retina */
+$resolution2x: 2dppx;

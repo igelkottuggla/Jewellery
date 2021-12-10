@@ -1,0 +1,11 @@
+.header .wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 883px;
+
+  @include tablet-mobile {
+    max-width: unset;
+  }
+}
