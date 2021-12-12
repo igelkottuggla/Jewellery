@@ -1,0 +1,22 @@
+.latest {
+  margin-top: 130px;
+  text-align: center;
+
+  @include media-tablet {
+    margin-top: 80px;
+  }
+
+  @include media-mobile {
+    margin-top: 70px;
+  }
+}
+
+.latest a {
+  @include reset-style-link;
+}
+
+.latest h2 {
+  @include reset-text-slyle;
+  @include section-titles;
+  line-height: 44px;
+}

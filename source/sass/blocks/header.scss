@@ -1,11 +1,120 @@
-.header .wrapper {
-  position: relative;
+.header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  max-width: 883px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  overflow-x: hidden;
+
+  @include media-mobile {
+    padding-top: 20px;
+  }
+}
+
+.header__button {
+  display: none;
+  color: $black-text;
+  transition: $basic-transition;
 
   @include tablet-mobile {
-    max-width: unset;
+    display: block;
+    width: 25px;
+    height: 16px;
+  }
+
+  @include media-tablet {
+    margin-top: 25px;
+  }
+
+  @include media-mobile {
+    margin-top: 18px;
+  }
+}
+
+.header__button:hover {
+  color: $light-grey-text;
+}
+
+.header__button svg {
+  stroke: $currentColor;
+}
+
+.header a {
+  @include reset-style-link;
+}
+
+.header__head {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.header__logo {
+  margin-right: auto;
+  margin-left: auto;
+  width: 66px;
+
+  @include media-mobile {
+    width: 52px;
+  }
+}
+
+.header__logo img {
+  @include media-mobile {
+    height: 52px;
+  }
+}
+
+.header__user-links {
+  @include small-plain-text;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: flex-end;
+  column-gap: 38px;
+  row-gap: 10px;
+  margin-top: 12px;
+  margin-left: auto;
+
+  @include tablet-mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header__user-links a:first-of-type {
+  @include tablet-mobile {
+    display: none;
+  }
+}
+
+.header__cart span {
+  @include tablet-mobile {
+    display: none;
+  }
+}
+
+.header__cart svg {
+  display: none;
+
+  @include tablet-mobile {
+    display: block;
+    stroke: $currentColor;
+  }
+}
+
+.header__user-links a:hover {
+  color: $golden-text;
+}
+
+.header__user-links a:active {
+  color: $light-grey-text;
+  transform: scale(0.98);
+}
+
+.header__user-links a:last-of-type:hover {
+  @include tablet-mobile {
+    color: $light-grey-text;
   }
 }

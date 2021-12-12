@@ -2,20 +2,28 @@ $white: #ffffff;
 $dark-grey: #1d1613;
 $light-grey: #9b9997;
 $basic-golden: #a87b62;
+$basic-golden-shadow: rgba(168, 122, 98, 0.24);
+$second-golden-shadow: rgba(168, 122, 98, 0.71);
 $basic-black: #000000;
 $basic-beige: #f0eae4;
 $special-light-grey: #f6f5f4;
+$currentColor: currentColor;
 
 /* Text colors */
 $black-text: $basic-black;
 $white-text: $white;
-$dark-grey-text: $light-grey;
+$dark-grey-text: $dark-grey;
+$light-grey-text: $light-grey;
+$golden-text: $basic-golden;
 
 /* BG colors */
+$primary-white-bg: $white;
+$primary-black-bg: $basic-black;
 $primary-beige-bg: $basic-beige;
 $primary-white-color: $white;
 $primary-golden-bg: $basic-golden;
 $border-grey-color: $special-light-grey;
+$border-white-color: $white;
 $border-golden-color: $basic-golden;
 
 /*Fonts*/
@@ -37,6 +45,9 @@ $font-weight-bold: 700;
 $font-style-normal: normal;
 $font-style-italic: italic;
 
+/* Font size */
+$small-dsk-fs: 14px;
+
 /* Sizes and breakpoints*/
 $phones-min: 320px;
 $phones-max: 767px;
@@ -46,3 +57,6 @@ $desktops: 1024px;
 
 /* Retina */
 $resolution2x: 2dppx;
+
+/* Retina */
+$basic-transition: all 0.2s;

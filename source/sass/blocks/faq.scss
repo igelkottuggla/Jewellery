@@ -1,0 +1,124 @@
+.faq {
+  margin-top: 130px;
+
+  @include media-tablet {
+    margin-top: 30px;
+  }
+
+  @include media-mobile {
+    margin-top: 20px;
+  }
+}
+
+.faq h2 {
+  @include reset-text-slyle;
+  @include section-titles;
+  line-height: 44px;
+  text-align: center;
+}
+
+.faq__list {
+  margin: 0 auto;
+  padding-top: 25px;
+  max-width: 970px;
+}
+
+.faq__item {
+  padding: 50px;
+  border: 1px solid #a87b62;
+
+  @include media-mobile {
+    padding: 22px 25px 24px 25px;
+  }
+}
+
+.faq__item:not(:last-of-type) {
+  border-bottom: none;
+}
+
+.faq button {
+  @include medium-text-average;
+  position: relative;
+  text-align: left;
+  line-height: 23px;
+  padding-right: 150px;
+  width: 100%;
+  text-align: left;
+  transition: $basic-transition;
+
+  @include media-mobile {
+    padding-right: 55px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 15px;
+    height: 8px;
+    background-image: url("../img/svg/arr-long-down-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    @include media-mobile {
+      width: 20px;
+      height: 10px;
+    }
+  }
+}
+
+.faq button:hover {
+  filter: drop-shadow(16px 10px 16px $second-golden-shadow);
+
+  &::after {
+    width: 18px;
+    height: 9px;
+  }
+}
+
+.faq__answer {
+  height: 0;
+}
+
+.faq__answer p {
+  @include reset-text-slyle;
+  @include regular-text-average;
+  font-size: $small-dsk-fs;
+  color: $dark-grey-text;
+  display: none;
+  margin-top: 20px;
+  max-width: 63%;
+}
+
+.faq__list--no-js .faq__answer {
+  height: 100%;
+}
+
+.faq__list--no-js .faq__answer p {
+  display: block;
+}
+
+.faq__list--no-js button::after {
+  background-image: url("../img/svg/arr-long-up-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.faq__item--active .faq__answer {
+  height: 100%;
+}
+
+.faq__item--active .faq__answer p {
+  display: block;
+}
+
+.faq__item--active button::after {
+  background-image: url("../img/svg/arr-long-up-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}

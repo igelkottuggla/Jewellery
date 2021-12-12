@@ -1,0 +1,70 @@
+.hero--main {
+  padding: 180px 0;
+  text-align: center;
+  color: $white-text;
+
+  @include media-mobile {
+    padding: 200px 0;
+  }
+}
+
+.hero--main h1 {
+  @include reset-text-slyle;
+  font-family: $f-accent-bold;
+  font-size: 45px;
+  line-height: 58px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  @include media-mobile {
+    font-size: 38px;
+    line-height: 49px;
+  }
+}
+
+.hero--main span {
+  display: block;
+  font-family: $f-accent-regular;
+  font-style: $font-style-italic;
+  $font-weight-normal: normal;
+  font-size: 38px;
+  line-height: 49px;
+  text-transform: none;
+
+  @include media-mobile {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+.no-webp .hero--main {
+  background-color: $primary-golden-bg;
+  background-image: url("../img/hero-main/hero-dsk@1x.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-color: $primary-golden-bg;
+    background-image: url("../img/hero-main/hero-dsk@2x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.webp .hero--main {
+  background-color: $primary-golden-bg;
+  background-image: url("../img/hero-main/hero-dsk@1x.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-color: $primary-golden-bg;
+    background-image: url("../img/hero-main/hero-dsk@2x.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,98 @@
+.subscription {
+  width: 42.74%;
+
+  @include media-tablet {
+    width: 72.92%;
+  }
+
+  @include media-mobile {
+    width: 100%;
+    max-width: 570px;
+  }
+}
+
+.subscription h2 {
+  @include reset-text-slyle;
+  @include big-accent-text;
+  margin-bottom: 25px;
+
+  @include media-mobile {
+    max-width: 70%;
+  }
+}
+
+.subscription p {
+  @include reset-text-slyle;
+  @include regular-text-average;
+  color: $light-grey-text;
+
+  @include media-mobile {
+    max-width: 80%;
+  }
+}
+
+.subscription__form {
+  position: relative;
+  margin-top: 40px;
+
+  @include media-tablet {
+    margin-top: 52px;
+  }
+}
+
+.subscription input {
+  @include small-plain-text;
+  line-height: 21px;
+  display: flex;
+  width: 100%;
+  padding: 15px 10px 15px 0;
+  border: none;
+  background-color: transparent;
+  color: $white-text;
+  border-bottom: 1px solid $border-white-color;
+  transition: $basic-transition;
+}
+
+.subscription input:focus {
+  background-color: transparent;
+  color: $white-text;
+  outline: 1px solid $primary-golden-bg;
+  outline-offset: 10px;
+  border-radius: 10px;
+}
+
+.subscription input::placeholder {
+  @include small-plain-text;
+  line-height: 21px;
+  color: $light-grey-text;
+  transition: $basic-transition;
+}
+
+.subscription input:hover {
+  cursor: pointer;
+}
+
+.subscription__form:hover button {
+  color: $golden-text;
+}
+
+.subscription input:hover::placeholder {
+  color: $white-text;
+}
+
+.subscription__button {
+  @include medium-text-average;
+  line-height: 21px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $white-text;
+  padding: 15px 0;
+  border: 0;
+  transition: $basic-transition;
+}
+
+.subscription__button svg {
+  stroke: $currentColor;
+}

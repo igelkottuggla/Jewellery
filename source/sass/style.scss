@@ -5,6 +5,30 @@
 @import "global";
 @import "wrapper";
 
-//Components
+// Header
+@import "blocks/button.scss";
 @import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/add-info.scss";
+@import "blocks/search-form.scss";
+
+// Footer
 @import "blocks/footer.scss";
+@import "blocks/links.scss";
+@import "blocks/subscription.scss";
+
+// Index
+@import "blocks/latest.scss";
+@import "blocks/slider.scss";
+@import "blocks/blog.scss";
+@import "blocks/faq.scss";
+@import "blocks/follow.scss";
+
+// Catalog
+@import "blocks/catalog.scss";
+@import "blocks/filter.scss";
+@import "blocks/results.scss";
+
+// Common
+@import "blocks/hero.scss";
+@import "blocks/section.scss";

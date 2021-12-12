@@ -1,5 +1,30 @@
-.footer .wrapper {
+.footer {
   display: flex;
   flex-shrink: 0;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 132px;
+  padding: 100px 0;
+  color: $white-text;
+  background-color: $primary-black-bg;
+
+  @include media-tablet {
+    margin-top: 80px;
+    padding: 60px 0;
+  }
+
+  @include media-mobile {
+    margin-top: 71px;
+    padding: 60px 0;
+  }
+}
+
+.footer .wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  @include tablet-mobile {
+    flex-direction: column;
+  }
 }

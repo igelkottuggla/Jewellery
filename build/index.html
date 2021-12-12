@@ -17,68 +17,83 @@
     <title>Jewellery</title>
   </head>
   <body>
-    <header class="header header--no-js wrapper">
-      <form class="header__search-form search-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label>
-          <svg width="14" height="14" viewbox="0 0 14 14" fill="none" class="search-form__icon">
-            <use xlink:href="./img/sprite_auto.svg#search-icon"></use>
-          </svg>
-          <input type="search" name="earch" id="search" placeholder="Type here to search">
-        </label>
-      </form>
-      <a>
-        <img src="./img/svg/logo-icon.svg" width="66" height="66" alt="Chjewellery logo">
-      </a>
-      <a href="login.html">Login</a>
-      <a href="#">Cart <span>0</span>
-        <svg width="20" height="18" viewbox="0 0 20 18" fill="none" class="header__cart-icon">
-          <use xlink:href="./img/sprite_auto.svg#cart-icon"></use>
-        </svg>
-      </a>
+    <header class="header header--no-js">
+      <div class="wrapper">
+        <div class="header__head">
+          <button class="header__button header__button--toggle button">
+            <svg width="25" height="18" viewbox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/sprite_auto.svg#burger-icon"></use>
+            </svg>
+          </button>
+          <form class="header__search-form search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label>
+              <svg width="14" height="14" viewbox="0 0 14 14" fill="none" class="search-form__icon">
+                <use xlink:href="./img/sprite_auto.svg#search-icon"></use>
+              </svg>
+              <input type="search" name="earch" id="search" placeholder="Type here to search">
+            </label>
+          </form>
+          <a class="header__logo">
+            <img src="./img/svg/logo-icon.svg" width="66" height="66" alt="Chjewellery logo">
+          </a>
+          <div class="header__user-links">
+            <a href="login.html">Login</a>
+            <a href="#" class="header__cart"><span>Cart </span><span id="header__counter">0</span>
+              <svg width="20" height="18" viewbox="0 0 20 18" fill="none" class="header__cart-icon">
+                <use xlink:href="./img/sprite_auto.svg#cart-icon"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
 
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="Contact Us">What’s new</a>
-          </li>
-          <li class="nav__item">
-            <a href="Contact Us">Chokers</a>
-          </li>
-          <li class="nav__item">
-            <a href="Contact Us">Necklaces</a>
-          </li>
-          <li class="nav__item">
-            <a href="Contact Us">Rings</a>
-          </li>
-          <li class="nav__item">
-            <a href="Contact Us">Earrings</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__add-info add-info">
-        <ul class="add-info__list">
-          <li class="add-info__item">
-            <a href="Contact Us">About CH</a>
-          </li>
-          <li class="add-info__item">
-            <a href="Contact Us">Stores &amp; Hours</a>
-          </li>
-          <li class="add-info__item">
-            <a href="Contact Us">Contact Us</a>
-          </li>
-        </ul>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="Contact Us">What’s new</a>
+            </li>
+            <li class="nav__item">
+              <a href="Contact Us">Chokers</a>
+            </li>
+            <li class="nav__item">
+              <a href="Contact Us">Necklaces</a>
+            </li>
+            <li class="nav__item">
+              <a href="Contact Us">Rings</a>
+            </li>
+            <li class="nav__item">
+              <a href="Contact Us">Earrings</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__add-info add-info">
+          <ul class="add-info__list">
+            <li class="add-info__item">
+              <a href="Contact Us">About CH</a>
+            </li>
+            <li class="add-info__item">
+              <a href="Contact Us">Stores &amp; Hours</a>
+            </li>
+            <li class="add-info__item">
+              <a href="Contact Us">Contact Us</a>
+            </li>
+            <li class="add-info__item">
+              <a href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
+
     <main>
-      <section class="hero">
+      <section class="hero hero--main section">
         <div class="wrapper">
           <h1>Perfection <span>made to be yours</span></h1>
         </div>
       </section>
-      <section class="latest wrapper">
+      <section class="latest wrapper section">
         <h2>New In</h2>
         <a href="catalog.html">Shop Now</a>
-        <div class="latest__slider latest__slider">
+        <div class="latest__slider slider">
           <div class="slider__list">
             <article class="slider__slide">
               <a href="#">
@@ -128,42 +143,60 @@
         </div>
       </section>
 
-      <section class="blog wrapper">
+      <section class="blog wrapper section">
         <h2>Blog</h2>
         <a href="#">Read All</a>
         <div class="blog__articles">
           <article class="blog__article">
             <picture>
+              <source srcset="
+                  ./img/blog/blog-bg-1-tablet@1x.png 1x,
+                  ./img/blog/blog-bg-1-tablet@2x.png 2x
+                " media="(max-width: 1023px)">
               <img src="./img/blog/blog-bg-1@1x.png" alt="">
             </picture>
-            <p>September 30, 2019</p>
-            <h3>How to care for your jewellery</h3>
-            <a href="#">Read Article</a>
+            <div class="blog__article-content">
+              <p>September 30, 2019</p>
+              <h3>How to care for your jewellery</h3>
+              <a href="#">Read Article</a>
+            </div>
           </article>
           <article class="blog__article">
             <picture>
+              <source srcset="
+                  ./img/blog/blog-bg-2-tablet@1x.png 1x,
+                  ./img/blog/blog-bg-2-tablet@2x.png 2x
+                " media="(max-width: 1023px)">
               <img src="./img/blog/blog-bg-2@1x.png" alt="">
             </picture>
-            <p>September 23, 2019</p>
-            <h3>Power of crystals</h3>
-            <a href="#">Read Article</a>
+            <div class="blog__article-content">
+              <p>September 23, 2019</p>
+              <h3>Power of crystals</h3>
+              <a href="#">Read Article</a>
+            </div>
           </article>
           <article class="blog__article">
             <picture>
+              <source srcset="
+                  ./img/blog/blog-bg-3-tablet@1x.png 1x,
+                  ./img/blog/blog-bg-3-tablet@2x.png 2x
+                " media="(max-width: 1023px)">
               <img src="./img/blog/blog-bg-3@1x.png" alt="">
             </picture>
-            <p>September 16, 2019</p>
-            <h3>AW 19 trends</h3>
-            <a href="#">Read Article</a>
+            <div class="blog__article-content">
+              <p>September 16, 2019</p>
+              <h3>AW 19 trends</h3>
+              <a href="#">Read Article</a>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="faq wrapper">
+      <section class="faq wrapper section">
         <h2>Frequently asked questions</h2>
-        <div class="faq__list">
-          <div class="faq__item">
-            <button class="faq__button button">
+        <div class="faq__list faq__list--no-js">
+          <div class="faq__item faq__item--active">
+            <button class="faq__button button" type="button">
               What materials are the jewellery made of?
             </button>
             <div class="faq__answer">
@@ -176,7 +209,7 @@
           </div>
 
           <div class="faq__item">
-            <button class="faq__button button">
+            <button class="faq__button button" type="button">
               Which countries do you deliver to?
             </button>
             <div class="faq__answer">
@@ -189,7 +222,7 @@
           </div>
 
           <div class="faq__item">
-            <button class="faq__button button">
+            <button class="faq__button button" type="button">
               What are the payment methods?
             </button>
             <div class="faq__answer">
@@ -202,7 +235,7 @@
           </div>
 
           <div class="faq__item">
-            <button class="faq__button button">
+            <button class="faq__button button" type="button">
               Can I return the jewellery if it didn’t fit me?
             </button>
             <div class="faq__answer">
@@ -216,7 +249,7 @@
         </div>
       </section>
 
-      <section class="follow">
+      <section class="follow wrapper section">
         <h2>&commat;Chjewellery</h2>
         <a href="#">Follow Us</a>
         <div class="follow__pics">
@@ -258,14 +291,15 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="wrapper">
         <div class="footer__subscription subscription">
           <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>
-          <form method="post" action="https://echo.htmlacademy.ru" class="footer__form">
+          <form method="post" action="https://echo.htmlacademy.ru" class="subscription__form">
             <label>
-              <input type="email" name="email" id="email" placeholder="Your E-mail">
+              <input type="email" name="email" id="email" placeholder="Your E-mail" autocomplete="off">
             </label>
             <button type="submit" class="subscription__button button">
               Sign Up
@@ -291,43 +325,43 @@
             </li>
           </ul>
           <ul class="links__company-links">
-            <li class="company-link">
+            <li class="links__company-link">
               <a href="#">About CH</a>
             </li>
-            <li class="company-link">
+            <li class="links__company-link">
               <a href="#">Stores &amp; Hours</a>
             </li>
-            <li class="company-link">
+            <li class="links__company-link">
               <a href="#">Jobs</a>
             </li>
-            <li class="company-link">
+            <li class="links__company-link">
               <a href="#">Contact Us</a>
             </li>
           </ul>
           <ul class="links__social-links">
             <li class="links__social-link">
-              <a href="#">Facebook
+              <a href="#"><span>Facebook</span>
                 <svg width="8" height="15" viewbox="0 0 8 15" fill="none" class="links__siocial-icon">
                   <use xlink:href="./img/sprite_auto.svg#fb-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="links__social-link">
-              <a href="#">Instagram
+              <a href="#"><span>Instagram</span>
                 <svg width="15" height="15" viewbox="0 0 15 15" fill="none" class="links__siocial-icon">
                   <use xlink:href="./img/sprite_auto.svg#inst-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="links__social-link">
-              <a href="#">Pinterest
+              <a href="#"><span>Pinterest</span>
                 <svg width="16" height="15" viewbox="0 0 16 15" fill="none" class="links__siocial-icon">
                   <use xlink:href="./img/sprite_auto.svg#pinterest-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="links__social-link">
-              <a href="#">Twitter
+              <a href="#"><span>Twitter</span>
                 <svg width="15" height="13" viewbox="0 0 15 13" fill="none" class="links__siocial-icon">
                   <use xlink:href="./img/sprite_auto.svg#twitter-icon"></use>
                 </svg>
@@ -337,5 +371,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/vendor.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

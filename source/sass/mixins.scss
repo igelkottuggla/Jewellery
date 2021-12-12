@@ -47,17 +47,13 @@
 
 @mixin reset-style-button {
   display: block;
-  font-family: $f-semi-bold;
-  font-weight: $font-weight-semibold;
   text-align: center;
   border: none;
-  background-color: $primary-turquoise-bg;
   appearance: none;
   text-decoration: none;
+  background-color: transparent;
   cursor: pointer;
-  color: $black-text;
-  font-size: 15px;
-  line-height: 21px;
+  padding: 0;
 }
 
 @mixin font(
@@ -72,30 +68,22 @@
   font-style: $fontStyle;
 }
 
-// @mixin accent-text {
-//   @include font($light-f, 16px, $font-weight-light, normal);
-// }
+@mixin section-titles {
+  @include font($f-accent-bold, 34px, $font-weight-normal, normal);
+}
 
-// @mixin big-accent-text {
-//   @include font($light-f, 18px, $font-weight-light, normal);
-// }
+@mixin big-accent-text {
+  @include font($f-accent-bold, 34px, $font-weight-normal, normal);
+}
 
-// @mixin hero-title {
-//   @include font($f-bold, 30px, $font-weight-bold, normal);
-// }
+@mixin medium-text-average {
+  @include font($main-f, 16px, $font-weight-normal, normal);
+}
 
-// @mixin placeholder-text {
-//   @include font($main-f, 15px, $font-weight-normal, normal);
-// }
+@mixin regular-text-average {
+  @include font($plain-text-f, 16px, $font-weight-normal, normal);
+}
 
-// @mixin section-titles-dks {
-//   @include font($f-semi-bold, 30px, $font-weight-semibold, normal);
-// }
-
-// @mixin section-titles-tablet-mobile {
-//   @include font($f-semi-bold, 24px, $font-weight-semibold, normal);
-// }
-
-// @mixin plain-text {
-//   @include font($main-f, 22px, $font-weight-normal, normal);
-// }
+@mixin small-plain-text {
+  @include font($main-f, 14px, $font-weight-normal, normal);
+}
