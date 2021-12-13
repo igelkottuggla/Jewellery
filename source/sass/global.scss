@@ -31,7 +31,7 @@ body {
   font-family: $main-f;
   color: $black-text;
   background-color: $primary-white-bg;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-medium;
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -48,10 +48,10 @@ img {
   flex-shrink: 0;
 }
 
-// .hidden {
-//   display: none;
-// }
+.hidden {
+  display: none;
+}
 
-// .overflow-hidden {
-//   overflow-y: hidden;
-// }
+.overflow-hidden {
+  overflow-y: hidden;
+}

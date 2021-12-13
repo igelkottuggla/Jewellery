@@ -1,0 +1,37 @@
+.catalog {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 80px;
+  width: 100%;
+
+  @include tablet-mobile {
+    flex-direction: column;
+  }
+}
+
+.catalog__button--toggle-filter {
+  display: none;
+  color: $white-text;
+  background-color: #a87b62;
+  padding: 28px 0;
+
+  @include tablet-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
+
+  @include media-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog__filter {
+  @include tablet-mobile {
+    display: none;
+  }
+}

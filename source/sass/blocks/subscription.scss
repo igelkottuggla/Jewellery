@@ -13,7 +13,7 @@
 
 .subscription h2 {
   @include reset-text-slyle;
-  @include big-accent-text;
+  @include section-titles;
   margin-bottom: 25px;
 
   @include media-mobile {

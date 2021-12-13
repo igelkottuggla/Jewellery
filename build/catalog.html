@@ -34,7 +34,7 @@
               <input type="search" name="earch" id="search" placeholder="Type here to search">
             </label>
           </form>
-          <a class="header__logo">
+          <a class="header__logo" href="index.html">
             <img src="./img/svg/logo-icon.svg" width="66" height="66" alt="Chjewellery logo">
           </a>
           <div class="header__user-links">
@@ -94,75 +94,96 @@
           </p>
         </div>
       </section>
-      <div class="catalog">
-        <div class="catalog__filter filter">
-          <form action="/filter" method="GET">
+
+      <section class="catalog wrapper">
+        <button class="
+            catalog__button
+            catalog__button--no-js
+            catalog__button--toggle-filter
+            button
+          ">
+          Filter
+        </button>
+        <div class="catalog__filter filter catalog__filter--no-js">
+          <form method="GET" class="filter__form">
+            <button class="catalog__button-close button"></button>
             <h2 class="visually-hidden">Filters</h2>
 
             <fieldset>
-              <div class="filter__products">
-                <h3>Product</h3>
+              <div class="
+                  filter__control filter__control--active filter__control--no-js
+                ">
+                <button class="filter__button filter__button--options button">
+                  Product
+                </button>
                 <div class="filter__product">
-                  <input id="necklaces" type="checkbox" checked="checked">
+                  <input id="necklaces" type="checkbox" checked="checked" class="visually-hidden">
                   <label for="necklaces">Necklaces</label>
                 </div>
 
                 <div class="filter__product">
-                  <input id="chokers" type="checkbox">
+                  <input id="chokers" type="checkbox" class="visually-hidden">
                   <label for="chokers">Chokers</label>
                 </div>
 
                 <div class="filter__product">
-                  <input id="rings" type="checkbox" checked="checked">
+                  <input id="rings" type="checkbox" checked="checked" class="visually-hidden">
                   <label for="rings">Rings</label>
                 </div>
 
                 <div class="filter__product">
-                  <input id="earrings" type="checkbox" checked="checked">
+                  <input id="earrings" type="checkbox" checked="checked" class="visually-hidden">
                   <label for="earrings">Earrings</label>
                 </div>
               </div>
             </fieldset>
 
             <fieldset>
-              <div class="filter__materials">
-                <h3>Material</h3>
+              <div class="filter__control filter__control--no-js">
+                <button class="filter__button filter__button--options button">
+                  Material
+                </button>
                 <div class="filer__material">
-                  <input name="gold" id="gold" type="checkbox" checked="checked">
+                  <input name="gold" id="gold" type="checkbox" checked="checked" class="visually-hidden">
                   <label for="gold">Gold</label>
                 </div>
 
                 <div class="filer__material">
-                  <input name="silber" id="silver" type="checkbox">
-                  <label for="socket">Silver</label>
+                  <input name="silver" id="silver" type="checkbox" class="visually-hidden">
+                  <label for="silver">Silver</label>
                 </div>
               </div>
             </fieldset>
 
             <fieldset>
-              <div class="filter__materials">
-                <h3>Collection</h3>
+              <div class="filter__control filter__control--no-js">
+                <button class="filter__button filter__button--options button">
+                  Collection
+                </button>
                 <div class="filer__collection">
-                  <input name="flamingo" id="flamingo" type="checkbox" checked="checked">
+                  <input name="flamingo" id="flamingo" type="checkbox" checked="checked" class="visually-hidden">
                   <label for="flamingo">Pink flamingo</label>
                 </div>
 
                 <div class="filer__collection">
-                  <input name="dreams" id="dreams" type="checkbox">
+                  <input name="dreams" id="dreams" type="checkbox" class="visually-hidden">
                   <label for="dreams">Dreams</label>
                 </div>
               </div>
             </fieldset>
 
             <fieldset>
-              <div class="filter__ranges">
-                <h3>Price</h3>
+              <div class="filter__control filter__control--no-js">
+                <button class="filter__button filter__button--options button">
+                  Price
+                </button>
                 <div class="filter__price-input">
+                  <div class="filter__price-progress"></div>
                   <label>
                     <input type="range" tabindex="0" value="55" max="100" min="0" step="1" id="min-price">
                   </label>
                   <label>
-                    <input type="range" tabindex="0" value="155" max="500" min="0" step="1" id="max-price">
+                    <input type="range" tabindex="0" value="155" max="900" min="0" step="1" id="max-price">
                   </label>
                 </div>
                 <div class="filter__price-output">
@@ -268,10 +289,21 @@
 
           <div class="results__pagination">
             <div class="results__button button">Previous</div>
+            <div class="results__pages">
+              <ul class="results__pages-number">
+                <li class="results__page-number results__page-number--active">
+                  <a href="#">1</a>
+                </li>
+                <li class="results__page-number"><a href="#">2</a></li>
+                <li class="results__page-number"><a href="#">3</a></li>
+                <li class="results__page-number"><a href="#">4</a></li>
+                <li class="results__page-number"><a href="#">5</a></li>
+              </ul>
+            </div>
             <div class="results__button button">Next</div>
           </div>
         </section>
-      </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -353,5 +385,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/vendor.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

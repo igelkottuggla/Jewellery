@@ -55,5 +55,6 @@
 
 .slider p {
   @include reset-text-slyle;
-  font-family: $f-bold;
+  @include small-bold-text;
+  line-height: 18px;
 }

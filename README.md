@@ -1,4 +1,6 @@
-# Gulp template Liga A
+# Jewellery online store
+
+HTML Academy accelerator's project
 
 ## Краткая инструкция по работе
 

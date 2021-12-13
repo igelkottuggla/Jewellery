@@ -17,3 +17,30 @@
     });
   }
 })();
+
+(function () {
+  const filterForm = document.querySelector('.filter__form');
+  const filterGroups = document.querySelectorAll('.filter__control');
+  const filterBtns = document.querySelectorAll('.filter__button--options');
+
+  if (filterForm) {
+    filterGroups.forEach((group) =>
+      group.classList.remove('filter__control--no-js')
+    );
+
+    filterBtns.forEach((button) => {
+      button.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        for (let i = 0; i < filterBtns.length; i++) {
+          if (filterBtns[i] === evt.target) {
+            filterBtns[i].parentElement.classList.toggle(
+                'filter__control--active'
+            );
+          }
+        }
+      });
+    });
+  }
+})();
+
+
