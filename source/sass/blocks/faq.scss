@@ -1,8 +1,8 @@
 .faq {
-  margin-top: 130px;
+  margin-top: 120px;
 
   @include media-tablet {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   @include media-mobile {
@@ -15,20 +15,28 @@
   @include section-titles;
   line-height: 44px;
   text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .faq__list {
-  margin: 0 auto;
-  padding-top: 25px;
+  margin: 48px auto 0;
   max-width: 970px;
+
+  @include media-mobile {
+    margin-top: 29px;
+  }
 }
 
 .faq__item {
-  padding: 50px;
+  padding: 43px 50px 43px 43px;
   border: 1px solid #a87b62;
 
+  @include media-tablet {
+    padding: 43px 50px 44px 49px;
+  }
+
   @include media-mobile {
-    padding: 22px 25px 24px 25px;
+    padding: 17px 25px 18px;
   }
 }
 
@@ -38,6 +46,7 @@
 
 .faq button {
   @include medium-text-average;
+  font-size: 18px;
   position: relative;
   text-align: left;
   line-height: 23px;
@@ -47,7 +56,9 @@
   transition: $basic-transition;
 
   @include media-mobile {
-    padding-right: 55px;
+    padding-right: 37px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   &::after {
@@ -63,9 +74,16 @@
     background-size: contain;
     background-position: center center;
 
+    @include media-tablet {
+      width: 23px;
+      height: 15px;
+    }
+
     @include media-mobile {
-      width: 20px;
-      height: 10px;
+      width: 25px;
+      height: 13px;
+      right: -4px;
+      transform: translateY(-114%);
     }
   }
 }
@@ -86,11 +104,27 @@
 .faq__answer p {
   @include reset-text-slyle;
   @include regular-text-average;
-  font-size: $small-dsk-fs;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 8px 0 0;
+  padding-left: 7px;
   color: $dark-grey-text;
   display: none;
-  margin-top: 20px;
-  max-width: 63%;
+  max-width: 61%;
+
+  @include media-tablet {
+    margin-top: 26px;
+    padding-left: 0;
+    max-width: 95%;
+  }
+
+  @include media-mobile {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 16px;
+    padding-left: 0;
+    max-width: 86%;
+  }
 }
 
 .faq__list--no-js .faq__answer {

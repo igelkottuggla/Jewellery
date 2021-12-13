@@ -1,13 +1,13 @@
 .latest {
-  margin-top: 130px;
+  margin-top: 121px;
   text-align: center;
 
   @include media-tablet {
-    margin-top: 80px;
+    margin-top: 71px;
   }
 
   @include media-mobile {
-    margin-top: 70px;
+    margin-top: 60px;
   }
 }
 
@@ -19,4 +19,50 @@
   @include reset-text-slyle;
   @include section-titles;
   line-height: 44px;
+  margin-bottom: 21px;
+
+  @include tablet-mobile {
+    margin-bottom: 18px;
+  }
+}
+
+.latest__track {
+  position: relative;
+}
+
+.latest__buttons {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  top: -105px;
+
+  @include media-tablet {
+    top: -95px;
+  }
+
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.latest__button {
+  width: 29px;
+  height: 9px;
+}
+
+.latest__button--prev {
+  position: absolute;
+  left: 0;
+  background-image: url("../img/svg/arr-long-left-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.latest__button--next {
+  position: absolute;
+  right: 0;
+  background-image: url("../img/svg/arr-long-right-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }

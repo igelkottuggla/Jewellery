@@ -2,7 +2,7 @@
   width: 42.74%;
 
   @include media-tablet {
-    width: 72.92%;
+    width: 82.92%;
   }
 
   @include media-mobile {
@@ -14,10 +14,13 @@
 .subscription h2 {
   @include reset-text-slyle;
   @include section-titles;
-  margin-bottom: 25px;
+  letter-spacing: 0.02em;
+  line-height: 44px;
+  margin-bottom: 6px;
 
   @include media-mobile {
-    max-width: 70%;
+    max-width: 75%;
+    margin-bottom: 10px;
   }
 }
 
@@ -33,10 +36,14 @@
 
 .subscription__form {
   position: relative;
-  margin-top: 40px;
+  margin-top: 26px;
 
   @include media-tablet {
-    margin-top: 52px;
+    margin-top: 27px;
+  }
+
+  @include media-mobile {
+    margin-top: 22px;
   }
 }
 
@@ -45,7 +52,7 @@
   line-height: 21px;
   display: flex;
   width: 100%;
-  padding: 15px 10px 15px 0;
+  padding: 15px 10px 9px 0;
   border: none;
   background-color: transparent;
   color: $white-text;
@@ -88,11 +95,13 @@
   top: 50%;
   transform: translateY(-50%);
   color: $white-text;
-  padding: 15px 0;
+  padding: 11px 0 7px;
   border: 0;
   transition: $basic-transition;
+  width: 106px;
 }
 
 .subscription__button svg {
   stroke: $currentColor;
+  margin-left: 8px;
 }

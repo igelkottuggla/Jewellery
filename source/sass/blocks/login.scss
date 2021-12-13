@@ -1,0 +1,137 @@
+.login__form {
+  position: relative;
+  margin: 100px auto;
+  padding: 195px 45px 65px;
+  background-color: $primary-beige-bg;
+  text-align: center;
+  width: 430px;
+  background-image: url("../img/login-popup/popup-bg@1x.png");
+  background-size: 100% 138px;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: $light-grey-text;
+
+  @include media-tablet {
+    width: 442px;
+  }
+
+  @include media-mobile {
+    margin: 50px auto;
+    padding: 129px 15px 45px;
+    width: 270px;
+    background-size: 100% 84px;
+  }
+}
+
+.login__button--close {
+  position: absolute;
+  background-image: url("../img/svg/close-icon-black.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 14px;
+  height: 14px;
+  top: 20px;
+  right: 20px;
+
+  @include media-mobile {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.login h1 {
+  @include reset-text-slyle;
+  @include section-titles;
+  line-height: 44px;
+  margin-bottom: 45px;
+  color: $dark-grey-text;
+}
+
+.login a {
+  @include reset-style-link;
+}
+
+.login fieldset {
+  @include reset-text-slyle;
+  border: none;
+}
+
+.login input {
+  @include small-plain-text;
+  line-height: 21px;
+  display: flex;
+  margin-bottom: 40px;
+  padding-bottom: 9px;
+  padding-right: 10px;
+  width: 100%;
+  background-color: $primary-beige-bg;
+  border: 0;
+  border-bottom: 1px solid #1d1613;
+  color: $dark-grey-text;
+}
+
+.login input::placeholder {
+  @include small-plain-text;
+  line-height: 21px;
+  color: $light-grey-text;
+}
+
+.login input:focus {
+  outline: none;
+}
+
+.login__field {
+  position: relative;
+}
+
+.login__button--login {
+  background-color: $primary-golden-bg;
+  color: $white-text;
+  width: 340px;
+  padding: 28px 0;
+  margin: 48px auto 0;
+
+  @include media-mobile {
+    width: 240px;
+  }
+}
+
+.login p {
+  @include reset-text-slyle;
+  @include small-plain-text;
+  margin-top: 20px;
+}
+
+.login a:last-of-type:not(.login__field:last-of-type a) {
+  margin-left: 10px;
+  color: $dark-grey-text;
+
+  @include media-mobile {
+    margin-left: 0;
+  }
+}
+
+.login__field:last-of-type a {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 60%;
+  text-align: right;
+
+  @include media-mobile {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.login__popup--open {
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $primary-white-bg;
+}

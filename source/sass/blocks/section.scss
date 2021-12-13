@@ -1,7 +1,3 @@
-.section h2 {
-  margin-bottom: 35px;
-}
-
 .section h2:first-of-type ~ a {
   position: relative;
   color: $dark-grey-text;
@@ -13,7 +9,11 @@
     width: 100%;
     background-color: $border-golden-color;
     left: 0;
-    bottom: -5px;
+    bottom: 0;
+
+    @include media-mobile {
+      bottom: -2px;
+    }
   }
 }
 

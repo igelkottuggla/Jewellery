@@ -1,24 +1,30 @@
 .hero--main {
-  padding: 180px 0;
+  padding: 181px 0;
   text-align: center;
   color: $white-text;
 
+  @include media-tablet {
+    padding-top: 182px;
+  }
+
   @include media-mobile {
-    padding: 200px 0;
+    padding: 189px 0 186px;
   }
 }
 
 .hero h1 {
   @include reset-text-slyle;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .hero--main h1 {
   @include big-accent-text;
   font-size: 45px;
-  line-height: 58px;
   letter-spacing: 0.03em;
+
+  @include media-tablet {
+    margin-left: -15px;
+  }
 
   @include media-mobile {
     font-size: 38px;
@@ -26,14 +32,20 @@
   }
 }
 
-.hero--main span {
-  display: block;
+.hero--main p {
+  @include reset-text-slyle;
   font-family: $f-accent-regular;
   font-style: $font-style-italic;
   $font-weight-normal: normal;
   font-size: 38px;
   line-height: 49px;
   text-transform: none;
+  font-weight: $font-weight-normal;
+  margin-top: -5px;
+
+  @include media-tablet {
+    margin-left: -15px;
+  }
 
   @include media-mobile {
     font-size: 34px;
