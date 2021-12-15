@@ -17,6 +17,10 @@
   }
 }
 
+.results__item img {
+  height: auto;
+}
+
 .results__item h3,
 .results__item p {
   @include reset-text-slyle;

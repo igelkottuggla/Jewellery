@@ -6,7 +6,6 @@
     display: none;
   }
 }
-
 .search-form svg {
   position: absolute;
   top: 50%;
@@ -47,4 +46,68 @@
   @include small-plain-text;
   line-height: 21px;
   color: $light-grey-text;
+}
+
+@include tablet-mobile {
+  .header--no-js .search-form {
+    order: 1;
+    display: block;
+    width: 100%;
+    grid-column: 1/4;
+    margin-top: 40px;
+    color: $white-text;
+  }
+
+  .header--no-js input {
+    display: flex;
+    color: $white-text;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 21px;
+    width: 100%;
+  }
+
+  .header--no-js input::placeholder {
+    opacity: 0;
+  }
+
+  .header--no-js .search-form__icon {
+    left: 12px;
+  }
+
+  .header--opened .search-form {
+    order: 1;
+    display: block;
+    width: 100%;
+    grid-column: 1/4;
+    color: $white-text;
+  }
+
+  .header--opened input {
+    display: flex;
+    color: $white-text;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 21px;
+    width: 100%;
+    padding: 6px 10px 13px 30px;
+  }
+
+  .header--opened input::placeholder {
+    opacity: 0;
+  }
+
+  .header--opened .search-form__icon {
+    left: 12px;
+  }
+}
+
+@include media-tablet {
+  .header--opened .search-form {
+    margin-top: 33px;
+  }
+}
+
+@include media-mobile {
+  .header--opened .search-form {
+    margin-top: 22px;
+  }
 }

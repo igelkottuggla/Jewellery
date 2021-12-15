@@ -1,6 +1,7 @@
 .filter {
   margin-right: 50px;
   width: 250px;
+  flex-shrink: 0;
 }
 
 .filter__button {
@@ -12,7 +13,7 @@
 .filter__button--options {
   position: relative;
   text-align: left;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 
   &::after {
     position: absolute;
@@ -37,7 +38,7 @@
 }
 
 .filter fieldset {
-  padding: 28px 25px 0;
+  padding: 23px 22px 0 23px;
   border: 1px solid #a87b62;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .filter__control div:not(:last-of-type) {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .filter__control div:last-of-type {
@@ -80,9 +81,8 @@ fieldset:not(:last-of-type) label {
     width: 15px;
     height: 15px;
     border: 1px solid #a87b62;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 10px;
+    top: 3px;
   }
 }
 
@@ -91,6 +91,10 @@ fieldset:not(:last-of-type) label {
 }
 
 .filter__control--active div {
+  display: block;
+}
+
+.catalog--no-js .filter__control div {
   display: block;
 }
 
@@ -147,6 +151,10 @@ fieldset:not(:last-of-type) label {
   margin-right: 73px;
 }
 
+.catalog--no-js .catalog__button--toggle-filter {
+  display: none;
+}
+
 .filter__button--show {
   margin: 35px 0 25px;
   padding: 28px 0;
@@ -170,11 +178,11 @@ fieldset:not(:last-of-type) label {
   }
 }
 
-.filter__control--no-js {
+.catalog--no-js .filter__control {
   display: block;
 }
 
-.filter__control--no-js .filter__button--options::after {
+.catalog--no-js .filter__button--options::after {
   background-image: url("../img/svg/arr-long-up-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -196,37 +204,40 @@ fieldset:not(:last-of-type) label {
   display: none;
 }
 
-.catalog__filter--show {
-  display: block;
-  position: fixed;
-  -webkit-overflow-scrolling: touch;
-  left: -15px;
-  top: 75px;
-  overflow: hidden;
-  overflow-y: auto;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.filter--show {
+  @include tablet-mobile {
+    display: block;
+    position: fixed;
+    left: -15px;
+    top: 75px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(219, 213, 208, 0.24);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
   @include media-mobile {
     padding: 10px;
-    background: rgba(255, 255, 255, 1);
+    background-color: $primary-white-bg;
   }
 }
 
-.catalog__filter--show .filter__form {
+.filter--show .filter__form {
   background-color: $primary-white-bg;
   box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
 
   @include media-tablet {
     width: 439px;
+    height: 100%;
     min-height: 857px;
-    top: 75px;
-    left: -15px;
+    margin: 115px auto auto;
   }
 
   @include media-mobile {
@@ -234,33 +245,38 @@ fieldset:not(:last-of-type) label {
     height: 100%;
     min-height: 736px;
     top: 76px;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
-.catalog__filter--show .catalog__button-close {
-  display: block;
-  position: absolute;
-  background-color: $basic-black;
-  width: 32px;
-  height: 32px;
-  background-image: url("../img/svg/close-icon-white.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  top: -15px;
-  right: -15px;
-}
+@include tablet-mobile {
+  .filter--show .filter__button-close {
+    display: block;
+    position: absolute;
+    background-color: $basic-black;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/svg/close-icon-white.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    top: -15px;
+    right: -15px;
+  }
 
-.catalog__filter--no-js {
-  @include tablet-mobile {
+  .catalog--no-js .catalog__buttons {
+    display: none;
+  }
+
+  .catalog--no-js .filter__button--show,
+  .catalog--no-js .filter__button--clear {
+    width: 100%;
+  }
+  .catalog--no-js .catalog__filter {
     display: block;
     width: 100%;
     max-width: 790px;
     margin-bottom: 50px;
   }
-}
-
-.catalog__button--no-js {
-  display: none;
 }

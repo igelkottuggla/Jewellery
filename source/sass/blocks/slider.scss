@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  margin-top: 60px;
+  margin-top: 58px;
 
   @include media-tablet {
     margin-top: 52px;
@@ -37,12 +37,9 @@
   opacity: 0.8;
 }
 
-// .slider__slide:not(:last-of-type) {
-//   margin-right: 30px;
-// }
-
 .slider img {
   margin-bottom: 20px;
+  height: 100%;
 
   @include media-tablet {
     max-width: 100%;
@@ -83,9 +80,4 @@
   @include media-mobile {
     margin-top: 31px;
   }
-}
-
-.slider__dot {
-  @include reset-style-button;
-  margin-right: 15px;
 }

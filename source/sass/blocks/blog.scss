@@ -15,7 +15,7 @@
   @include reset-text-slyle;
   @include section-titles;
   line-height: 44px;
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 }
 
 .blog a {
@@ -23,7 +23,7 @@
 }
 
 .blog__articles {
-  margin-top: 61px;
+  margin-top: 63px;
 
   @include media-desktop {
     display: grid;
@@ -38,7 +38,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 52px;
+  }
+
+  @include media-tablet {
+    margin-top: 61px;
+  }
+
+  @include media-mobile {
+    margin-top: 53px;
   }
 }
 
@@ -138,12 +145,15 @@
   right: 0;
   bottom: 0;
 
+  @include tablet-mobile {
+    position: static;
+  }
+
   @include media-tablet {
     padding: 85px 84px 56px;
   }
 
-  @include tablet-mobile {
-    position: static;
+  @include media-mobile {
     padding-top: 62px;
     padding-bottom: 69px;
   }

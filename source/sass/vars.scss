@@ -4,6 +4,7 @@ $light-grey: #9b9997;
 $basic-golden: #a87b62;
 $basic-golden-shadow: rgba(168, 122, 98, 0.24);
 $second-golden-shadow: rgba(168, 122, 98, 0.71);
+$partial-opacity-white: rgba(255, 255, 255, 0.75);
 $basic-black: #000000;
 $basic-beige: #f0eae4;
 $special-light-grey: #f6f5f4;
@@ -12,6 +13,7 @@ $currentColor: currentColor;
 /* Text colors */
 $black-text: $basic-black;
 $white-text: $white;
+$partial-opacity-white-text: $partial-opacity-white;
 $dark-grey-text: $dark-grey;
 $light-grey-text: $light-grey;
 $golden-text: $basic-golden;

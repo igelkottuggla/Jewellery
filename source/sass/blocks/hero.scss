@@ -1,20 +1,33 @@
-.hero--main {
-  padding: 181px 0;
+.hero {
+  background-color: $primary-golden-bg;
   text-align: center;
   color: $white-text;
-
-  @include media-tablet {
-    padding-top: 182px;
-  }
-
-  @include media-mobile {
-    padding: 189px 0 186px;
-  }
 }
 
 .hero h1 {
   @include reset-text-slyle;
   text-transform: uppercase;
+}
+
+.hero p {
+  @include reset-text-slyle;
+  font-family: $f-accent-regular;
+  font-style: $font-style-italic;
+  $font-weight-normal: normal;
+}
+
+.hero--main {
+  @include media-desktop {
+    padding: 182px 0;
+  }
+
+  @include media-tablet {
+    padding: 182px 0;
+  }
+
+  @include media-mobile {
+    padding: 189px 0 186px;
+  }
 }
 
 .hero--main h1 {
@@ -33,13 +46,8 @@
 }
 
 .hero--main p {
-  @include reset-text-slyle;
-  font-family: $f-accent-regular;
-  font-style: $font-style-italic;
-  $font-weight-normal: normal;
   font-size: 38px;
   line-height: 49px;
-  text-transform: none;
   font-weight: $font-weight-normal;
   margin-top: -5px;
 
@@ -54,41 +62,91 @@
 }
 
 .no-webp .hero--main {
-  background-color: $primary-golden-bg;
   background-image: url("../img/hero-main/hero-dsk@1x.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @include retina {
-    background-color: $primary-golden-bg;
     background-image: url("../img/hero-main/hero-dsk@2x.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  @include media-tablet {
+    background-image: url("../img/hero-main/hero-tablet@1x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-main/hero-tablet@2x.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include media-mobile {
+    background-image: url("../img/hero-main/hero-mobile@1x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-main/hero-mobile@2x.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .webp .hero--main {
-  background-color: $primary-golden-bg;
   background-image: url("../img/hero-main/hero-dsk@1x.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @include retina {
-    background-color: $primary-golden-bg;
     background-image: url("../img/hero-main/hero-dsk@2x.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  @include media-tablet {
+    background-image: url("../img/hero-main/hero-tablet@1x.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-main/hero-tablet@2x.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include media-mobile {
+    background-image: url("../img/hero-main/hero-mobile@1x.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-main/hero-mobile@2x.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .hero--catalog {
-  padding: 102px 0;
-  text-align: center;
-  color: $white-text;
+  padding: 92px 0 100px;
 
   @include media-mobile {
     padding: 89px 0;
@@ -101,37 +159,90 @@
 }
 
 .hero--catalog p {
-  @include reset-text-slyle;
+  font-size: 22px;
+  line-height: 29px;
 }
 
 .no-webp .hero--catalog {
-  background-color: $primary-golden-bg;
   background-image: url("../img/hero-catalog/hero-catalog-dsk@1x.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @include retina {
-    background-color: $primary-golden-bg;
     background-image: url("../img/hero-catalog/hero-catalog-dsk@2x.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  @include media-tablet {
+    background-image: url("../img/hero-catalog/hero-catalog-tablet@1x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-catalog/hero-catalog-tablet@2x.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include media-mobile {
+    background-image: url("../img/hero-catalog/hero-catalog-mobile@1x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-catalog/hero-catalog-mobile@2x.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .webp .hero--catalog {
-  background-color: $primary-golden-bg;
   background-image: url("../img/hero-catalog/hero-catalog-dsk@1x.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @include retina {
-    background-color: $primary-golden-bg;
     background-image: url("../img/hero-catalog/hero-catalog-dsk@2x.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  @include media-tablet {
+    background-image: url("../img/hero-catalog/hero-catalog-tablet@1x.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-catalog/hero-catalog-tablet@2x.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include media-mobile {
+    background-image: url("../img/hero-catalog/hero-catalog-mobile@1x.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/hero-catalog/hero-catalog-mobile@2x.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }

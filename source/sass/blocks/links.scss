@@ -9,7 +9,7 @@
   }
 
   @include media-tablet {
-    margin-top: 43px;
+    margin-top: 44px;
     width: 87.61%;
   }
 
@@ -56,7 +56,7 @@
 .links__company-links {
   @include reset-list-slyle;
   @include medium-text-average;
-  margin-right: 111px;
+  margin-right: 109px;
 
   @include media-tablet {
     margin-right: 86px;
@@ -98,9 +98,15 @@
   justify-content: flex-start;
 }
 
+.links__social-links li {
+  @include media-mobile {
+    margin-right: 26px;
+  }
+}
+
 .links__social-links svg {
   order: -1;
-  margin-right: 11px;
+  margin-right: 10px;
   fill: currentColor;
 
   @include media-tablet {
@@ -108,13 +114,15 @@
   }
 
   @include media-mobile {
-    margin-right: 26px;
+    margin-right: 0;
     height: 21px;
     width: 20px;
   }
 }
 
 .links__social-links span {
+  flex-grow: 1;
+
   @include media-mobile {
     display: none;
   }
