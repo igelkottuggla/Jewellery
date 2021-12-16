@@ -10,7 +10,7 @@
     position: absolute;
     content: "";
     height: 1px;
-    background-color: #f6f5f4;
+    background-color: $border-grey-color;
     left: calc(-50vw + 50%);
     width: 100vw;
     top: 0;
@@ -103,12 +103,22 @@
 }
 
 @include media-tablet {
+  .header--no-js .nav {
+    padding-top: 0;
+    margin-top: 47px;
+  }
+
   .header--opened .nav {
     margin-top: 47px;
   }
 }
 
 @include media-mobile {
+  .header--no-js .nav {
+    padding-top: 0;
+    margin-top: 38px;
+  }
+
   .header--opened .nav {
     margin-top: 38px;
   }

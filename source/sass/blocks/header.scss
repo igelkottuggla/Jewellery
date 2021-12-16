@@ -179,7 +179,7 @@
     left: 0;
     right: 0;
     z-index: 99;
-    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation: swing-in-top-fwd 1s cubic-bezier(0.17, 0.88, 0.32, 1.27) both;
   }
 
   .header--opened .header__button--toggle {
@@ -199,12 +199,25 @@
   }
 }
 
+@include media-tablet {
+  .header--no-js {
+    padding-bottom: 53px;
+  }
+}
+
+@include media-mobile {
+  .header--no-js {
+    padding-bottom: 25px;
+  }
+}
+
 @keyframes swing-in-top-fwd {
   0% {
     transform: rotateX(-100deg);
     transform-origin: top;
     opacity: 0;
   }
+
   100% {
     transform: rotateX(0deg);
     transform-origin: top;

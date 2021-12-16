@@ -146,10 +146,16 @@
 }
 
 .hero--catalog {
-  padding: 92px 0 100px;
+  @include media-desktop {
+    padding: 92px 0 94px;
+  }
+
+  @include media-tablet {
+    padding: 92px 0 94px;
+  }
 
   @include media-mobile {
-    padding: 89px 0;
+    padding: 79px 0;
   }
 }
 
@@ -161,6 +167,7 @@
 .hero--catalog p {
   font-size: 22px;
   line-height: 29px;
+  margin-top: 2px;
 }
 
 .no-webp .hero--catalog {

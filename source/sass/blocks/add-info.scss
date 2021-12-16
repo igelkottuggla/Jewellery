@@ -63,6 +63,18 @@
 }
 
 @include media-tablet {
+  .header--no-js .add-info {
+    margin-top: 25px;
+  }
+
+  .header--no-js .add-info__item:last-of-type {
+    margin-top: 45px;
+  }
+
+  .header--no-js .add-info__item {
+    margin-bottom: 20px;
+  }
+
   .header--opened .add-info {
     margin-top: 23px;
   }
@@ -73,6 +85,18 @@
 }
 
 @include media-mobile {
+  .header--no-js .add-info {
+    margin-top: 13px;
+  }
+
+  .header--no-js .add-info__item {
+    margin-bottom: 20px;
+  }
+
+  .header--no-js .add-info__item:last-of-type {
+    margin-top: 35px;
+  }
+
   .header--opened .add-info {
     margin-top: 13px;
   }

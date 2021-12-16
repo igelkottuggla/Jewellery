@@ -3,6 +3,7 @@
     @content;
   }
 }
+
 @mixin tablet-mobile {
   @media (min-width: $phones-min) and (max-width: $tablets-max) {
     @content;

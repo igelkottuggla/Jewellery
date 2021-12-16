@@ -40,7 +40,6 @@
   <body>
     <!-- Класс header--no-js: реализация работы сайта без  включенного js (меню открыто, кнопка переключения меню неактивна)
     header--opened: реализация открытия/закрытия меню при подключенном js -->
-
     <header class="header header--no-js">
       <div class="wrapper">
         <div class="header__head">
@@ -55,6 +54,7 @@
               <use xlink:href="./img/sprite_auto.svg#burger-icon"></use>
             </svg>
           </button>
+
           <form
             class="header__search-form search-form"
             action="https://echo.htmlacademy.ru/"
@@ -89,6 +89,7 @@
               <use xlink:href="./img/sprite_auto.svg#logo-icon"></use>
             </svg>
           </a>
+
           <div class="header__user-links">
             <a href="login.html" class="header__login">Login</a>
             <a href="#" class="header__cart"
@@ -125,6 +126,7 @@
             </li>
           </ul>
         </nav>
+
         <div class="header__add-info add-info">
           <ul class="add-info__list">
             <li class="add-info__item">
@@ -151,9 +153,11 @@
           <p>made to be yours</p>
         </div>
       </section>
+
       <section class="latest wrapper section">
         <h2>New In</h2>
         <a href="catalog.html">Shop Now</a>
+
         <div class="latest__track">
           <div class="latest__buttons">
             <button
@@ -171,6 +175,7 @@
               "
             ></button>
           </div>
+
           <div class="latest__slider slider swiper">
             <div class="slider__list swiper-wrapper">
               <article class="slider__slide swiper-slide">
@@ -193,6 +198,7 @@
                       class="slider__img"
                       width="270"
                       height="284"
+                      loading="lazy"
                     />
                   </picture>
 
@@ -219,6 +225,7 @@
                       srcset="./img/slider/сhoker-slider@2x.png 2x"
                       alt="Layered сhoker"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Layered сhoker</h3>
@@ -244,6 +251,7 @@
                       srcset="./img/slider/gold-chain-slider@2x.png 2x"
                       alt="Gold chain"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Gold chain</h3>
@@ -269,6 +277,7 @@
                       srcset="./img/slider/earrings-slider@2x.png 2x"
                       alt="Galaxy earrings"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Galaxy earrings</h3>
@@ -294,6 +303,7 @@
                       srcset="./img/slider/amethyst-slider@2x.png 2x"
                       alt="Necklace with amethyst"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
 
@@ -320,6 +330,7 @@
                       srcset="./img/slider/сhoker-slider@2x.png 2x"
                       alt="Layered сhoker"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Layered сhoker</h3>
@@ -345,6 +356,7 @@
                       srcset="./img/slider/gold-chain-slider@2x.png 2x"
                       alt="Gold chain"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Gold chain</h3>
@@ -370,6 +382,7 @@
                       srcset="./img/slider/earrings-slider@2x.png 2x"
                       alt="Galaxy earrings"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Galaxy earrings</h3>
@@ -395,6 +408,7 @@
                       srcset="./img/slider/amethyst-slider@2x.png 2x"
                       alt="Necklace with amethyst"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
 
@@ -421,6 +435,7 @@
                       srcset="./img/slider/сhoker-slider@2x.png 2x"
                       alt="Layered сhoker"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Layered сhoker</h3>
@@ -446,6 +461,7 @@
                       srcset="./img/slider/gold-chain-slider@2x.png 2x"
                       alt="Gold chain"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Gold chain</h3>
@@ -471,6 +487,7 @@
                       srcset="./img/slider/earrings-slider@2x.png 2x"
                       alt="Galaxy earrings"
                       class="slider__img"
+                      loading="lazy"
                     />
                   </picture>
                   <h3>Galaxy earrings</h3>
@@ -487,6 +504,7 @@
       <section class="blog wrapper section">
         <h2>Blog</h2>
         <a href="#">Read All</a>
+
         <div class="blog__articles">
           <article class="blog__article">
             <picture>
@@ -500,12 +518,22 @@
                 media="(max-width: 1023px)"
               />
               <!-- 1x: 285x300px; 2x: 570x600px -->
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/blog/blog-bg-1@1x.webp 1x,
+                  ./img/blog/blog-bg-1@2x.webp 2x
+                "
+                media="(min-width: 1024px)"
+              />
+              <!-- 1x: 285x300px; 2x: 570x600px -->
               <img
                 src="./img/blog/blog-bg-1@1x.png"
                 srcset="./img/blog/blog-bg-1@2x.png 2x"
                 width="285"
                 height="300"
                 alt="Серьги фото"
+                loading="lazy"
               />
             </picture>
             <div class="blog__article-content">
@@ -514,6 +542,7 @@
               <a href="#">Read Article</a>
             </div>
           </article>
+
           <article class="blog__article">
             <picture>
               <!-- 1x: 285x300px; 2x: 570x600px -->
@@ -526,12 +555,22 @@
                 media="(max-width: 1023px)"
               />
               <!-- 1x: 285x300px; 2x: 570x600px -->
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/blog/blog-bg-2@1x.webp 1x,
+                  ./img/blog/blog-bg-2@2x.webp 2x
+                "
+                media="(min-width: 1024px)"
+              />
+              <!-- 1x: 285x300px; 2x: 570x600px -->
               <img
                 src="./img/blog/blog-bg-2@1x.png"
                 srcset="./img/blog/blog-bg-2@2x.png 2x"
                 width="285"
                 height="300"
                 alt="украшения крупным планом"
+                loading="lazy"
               />
             </picture>
             <div class="blog__article-content">
@@ -540,6 +579,7 @@
               <a href="#">Read Article</a>
             </div>
           </article>
+
           <article class="blog__article">
             <picture>
               <!-- 1x: 339x300px; 2x: 678x600px -->
@@ -552,12 +592,22 @@
                 media="(max-width: 1023px)"
               />
               <!-- 1x: 570x630px; 2x: 1140x1260px -->
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/blog/blog-bg-3@1x.webp 1x,
+                  ./img/blog/blog-bg-3@2x.webp 2x
+                "
+                media="(min-width: 1024px)"
+              />
+              <!-- 1x: 570x630px; 2x: 1140x1260px -->
               <img
                 src="./img/blog/blog-bg-3@1x.png"
                 srcset="./img/blog/blog-bg-3@2x.png 2x"
                 width="570"
                 height="630"
                 alt="фото женщины с украшениями"
+                loading="lazy"
               />
             </picture>
             <div class="blog__article-content">
@@ -574,6 +624,7 @@
 
       <section class="faq wrapper section">
         <h2>Frequently asked questions</h2>
+
         <div class="faq__list faq__list--no-js">
           <div class="faq__item faq__item--active">
             <button class="faq__button button" type="button">
@@ -632,6 +683,7 @@
       <section class="follow wrapper section">
         <h2>&commat;Chjewellery</h2>
         <a href="#">Follow Us</a>
+
         <div class="follow__pics">
           <div class="follow__pic">
             <picture>
@@ -651,9 +703,11 @@
                 width="230"
                 height="230"
                 alt="серьги-трансформеры"
+                loading="lazy"
               />
             </picture>
           </div>
+
           <div class="follow__pic">
             <picture>
               <!-- 1x: 399x412px; 2x: 798x824px -->
@@ -672,9 +726,11 @@
                 width="399"
                 height="412"
                 alt="этно серьги"
+                loading="lazy"
               />
             </picture>
           </div>
+
           <div class="follow__pic">
             <picture>
               <!-- 1x: 230x230px; 2x: 460x460px -->
@@ -693,9 +749,11 @@
                 width="230"
                 height="230"
                 alt="браслеты и кольцо"
+                loading="lazy"
               />
             </picture>
           </div>
+
           <div class="follow__pic">
             <picture>
               <!-- 1x: 230x230px; 2x: 460x460px -->
@@ -714,9 +772,11 @@
                 width="230"
                 height="230"
                 alt="серьги-кольца на книге"
+                loading="lazy"
               />
             </picture>
           </div>
+
           <div class="follow__pic">
             <picture>
               <!-- 1x: 230x150px; 2x: 460x300px -->
@@ -735,9 +795,11 @@
                 width="230"
                 height="150"
                 alt="серьги с крупными квадратными камнями"
+                loading="lazy"
               />
             </picture>
           </div>
+
           <div class="follow__pic">
             <picture>
               <!-- 1x: 230x150px; 2x: 460x300px -->
@@ -756,9 +818,11 @@
                 width="230"
                 height="150"
                 alt="набор украшений"
+                loading="lazy"
               />
             </picture>
           </div>
+
           <div class="follow__pic">
             <picture>
               <!-- 1x: 230x150px; 2x: 460x300px -->
@@ -777,6 +841,7 @@
                 width="230"
                 height="150"
                 alt="фото рук женщины с кольцами"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -789,6 +854,7 @@
         <div class="footer__subscription subscription">
           <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>
+
           <form
             method="post"
             action="https://echo.htmlacademy.ru"
@@ -819,6 +885,7 @@
             </button>
           </form>
         </div>
+
         <div class="footer__links links">
           <ul class="links__orders">
             <li class="links__link">
@@ -834,6 +901,7 @@
               <a href="#">Delivery</a>
             </li>
           </ul>
+
           <ul class="links__company-links">
             <li class="links__company-link">
               <a href="#">About CH</a>
@@ -848,6 +916,7 @@
               <a href="#">Contact Us</a>
             </li>
           </ul>
+
           <ul class="links__social-links">
             <li class="links__social-link">
               <a href="#"
@@ -910,13 +979,19 @@
       </div>
     </footer>
 
+    <!-- Класс popup--no-js: реализация работы сайта без  включенного js (переход на отдельную страницу с логином)
+    visually-hidden + popup--no-js: реализация открытия/закрытия пункта при подключенном js -->
+
     <div class="popup visually-hidden popup--no-js">
-      <form method="GET" class="popup__form">
-        <button class="popup__button button popup__button--close"></button>
-        <h1>Log in</h1>
+      <form method="GET" class="popup__form form">
+        <button
+          class="form__button button form__button--close"
+          aria-label="Close form"
+        ></button>
+        <h2>Log In</h2>
 
         <fieldset>
-          <div class="popup__field">
+          <div class="form__field">
             <label
               ><input
                 id="user-email"
@@ -926,7 +1001,7 @@
             /></label>
           </div>
 
-          <div class="popup__field">
+          <div class="form__field">
             <label
               ><input
                 id="user-password"
@@ -939,12 +1014,11 @@
           </div>
         </fieldset>
 
-        <button class="popup__button button popup__button--login">
-          Log In
-        </button>
+        <button class="form__button button form__button--login">Log In</button>
         <p>Don’t have an account? <a href="#">Sign up</a></p>
       </form>
     </div>
+
     <script src="./js/vendor.js"></script>
     <script src="./js/script.js"></script>
   </body>

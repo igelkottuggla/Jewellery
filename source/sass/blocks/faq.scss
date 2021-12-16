@@ -1,5 +1,7 @@
 .faq {
-  margin-top: 120px;
+  @include media-desktop {
+    margin-top: 120px;
+  }
 
   @include media-tablet {
     margin-top: 20px;
@@ -28,8 +30,11 @@
 }
 
 .faq__item {
-  padding: 43px 50px 43px 43px;
-  border: 1px solid #a87b62;
+  border: 1px solid $border-golden-color;
+
+  @include media-desktop {
+    padding: 43px 50px 43px 43px;
+  }
 
   @include media-tablet {
     padding: 43px 50px 44px 49px;
@@ -52,7 +57,6 @@
   line-height: 23px;
   padding-right: 150px;
   width: 100%;
-  text-align: left;
   transition: $basic-transition;
 
   @include media-mobile {
@@ -67,12 +71,15 @@
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    width: 15px;
-    height: 8px;
     background-image: url("../img/svg/arr-long-down-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+
+    @include media-desktop {
+      width: 15px;
+      height: 8px;
+    }
 
     @include media-tablet {
       width: 23px;
@@ -99,6 +106,7 @@
 
 .faq__answer {
   height: 0;
+  transition: $basic-transition;
 }
 
 .faq__answer p {
@@ -107,14 +115,16 @@
   font-size: 16px;
   line-height: 21px;
   margin: 8px 0 0;
-  padding-left: 7px;
   color: $dark-grey-text;
   display: none;
-  max-width: 61%;
+
+  @include media-desktop {
+    padding-left: 7px;
+    max-width: 61%;
+  }
 
   @include media-tablet {
     margin-top: 26px;
-    padding-left: 0;
     max-width: 95%;
   }
 
@@ -122,7 +132,6 @@
     font-size: 14px;
     line-height: 20px;
     margin-top: 16px;
-    padding-left: 0;
     max-width: 86%;
   }
 }

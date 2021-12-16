@@ -31,3 +31,22 @@
     flex-direction: column;
   }
 }
+
+.footer ul {
+  flex-shrink: 0;
+}
+
+.footer--catalog {
+  @include media-desktop {
+    margin-top: 73px;
+  }
+
+  @include media-tablet {
+    margin-top: 73px;
+  }
+
+  @include media-mobile {
+    margin-top: 63px;
+    padding-bottom: 42px;
+  }
+}

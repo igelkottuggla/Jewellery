@@ -8,12 +8,24 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: $primary-white-bg;
   padding: 20px;
   z-index: 99;
 }
 
-.popup .login__form {
+.popup .popup__form {
   position: relative;
-  margin: 115px auto auto;
+
+  @include media-desktop {
+    margin: 94px auto 0;
+  }
+
+  @include media-tablet {
+    margin: 60px auto 0;
+    padding: 194px 45px 54px;
+  }
+
+  @include media-mobile {
+    margin: 48px auto 0;
+  }
 }

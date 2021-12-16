@@ -2,31 +2,47 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 80px;
   width: 100%;
+
+  @include media-desktop {
+    margin-top: 80px;
+  }
 
   @include tablet-mobile {
     flex-direction: column;
   }
+
+  @include media-tablet {
+    margin-top: 50px;
+  }
+
+  @include media-mobile {
+    margin-top: 39px;
+  }
 }
 
 .catalog__button--toggle-filter {
-  display: none;
   color: $white-text;
-  background-color: #a87b62;
+  background-color: $primary-golden-bg;
   padding: 28px 0;
+  font-size: 16px;
+  line-height: 130%;
+
+  @include media-desktop {
+    display: none;
+  }
 
   @include tablet-mobile {
-    display: block;
+    padding: 24px 0;
     width: 100%;
   }
 
   @include media-tablet {
-    margin-bottom: 30px;
+    margin-bottom: 49px;
   }
 
   @include media-mobile {
-    margin-bottom: 20px;
+    margin-bottom: 39px;
   }
 }
 

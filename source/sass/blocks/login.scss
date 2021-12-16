@@ -1,29 +1,85 @@
-.login__form {
+.form {
   position: relative;
   margin: 100px auto;
-  padding: 195px 45px 65px;
-  background-color: $primary-beige-bg;
   text-align: center;
-  width: 430px;
-  background-image: url("../img/login-popup/popup-bg@1x.png");
-  background-size: 100% 138px;
-  background-repeat: no-repeat;
-  background-position: top;
   color: $light-grey-text;
+  background-color: $primary-beige-bg;
+
+  @include media-desktop {
+    padding: 194px 45px 54px;
+    width: 430px;
+  }
 
   @include media-tablet {
+    padding: 80px 51px 54px;
     width: 442px;
   }
 
   @include media-mobile {
     margin: 50px auto;
-    padding: 129px 15px 45px;
+    padding: 121px 15px 39px;
     width: 270px;
     background-size: 100% 84px;
   }
 }
 
-.login__button--close {
+.no-webp .form {
+  background-image: url("../img/login-popup/popup-bg@1x.png");
+  background-size: 100% 138px;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-size: 100% 138px;
+    background-image: url("../img/login-popup/popup-bg@2x.png");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  @include media-mobile {
+    background-image: url("../img/login-popup/popup-bg@2x.png");
+    background-size: 100% 84px;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/login-popup/popup-bg@2x.png");
+      background-size: 100% 84px;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.webp .form {
+  background-image: url("../img/login-popup/popup-bg@1x.webp");
+  background-size: 100% 138px;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-size: 100% 138px;
+    background-image: url("../img/login-popup/popup-bg@2x.webp");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  @include media-mobile {
+    background-image: url("../img/login-popup/popup-bg@1x.webp");
+    background-size: 100% 84px;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/login-popup/popup-bg@2x.webp");
+      background-size: 100% 84px;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.form__button--close {
   position: absolute;
   background-image: url("../img/svg/close-icon-black.svg");
   background-repeat: no-repeat;
@@ -33,77 +89,111 @@
   top: 20px;
   right: 20px;
 
+  @include media-tablet {
+    width: 20px;
+    height: 20px;
+  }
+
   @include media-mobile {
     top: 15px;
     right: 15px;
   }
 }
 
-.login h1 {
-  @include reset-text-slyle;
-  @include section-titles;
-  line-height: 44px;
-  margin-bottom: 45px;
-  color: $dark-grey-text;
+.form__button--close:hover {
+  animation: rotate-center 0.6s ease-in-out both;
 }
 
-.login a {
+.form__button--close:active {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+
+.form h2 {
+  @include reset-text-slyle;
+  @include section-titles;
+  line-height: 31px;
+  margin-bottom: 39px;
+  color: $dark-grey-text;
+
+  @include media-mobile {
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 25px;
+  }
+}
+
+.form a {
   @include reset-style-link;
 }
 
-.login fieldset {
+.form fieldset {
   @include reset-text-slyle;
   border: none;
 }
 
-.login input {
+.form input {
   @include small-plain-text;
   line-height: 21px;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   padding-bottom: 9px;
   padding-right: 10px;
   width: 100%;
   background-color: $primary-beige-bg;
   border: 0;
-  border-bottom: 1px solid #1d1613;
+  border-bottom: 1px solid $dark-grey-border;
   color: $dark-grey-text;
+
+  @include media-mobile {
+    margin-bottom: 28px;
+  }
 }
 
-.login input::placeholder {
+.form input::placeholder {
   @include small-plain-text;
   line-height: 21px;
   color: $light-grey-text;
 }
 
-.login input:focus {
-  outline: none;
+.form input:hover::placeholder {
+  color: $dark-grey-text;
 }
 
-.login__field {
+.form__field {
   position: relative;
 }
 
-.login__button--login {
+.form__button--login {
   background-color: $primary-golden-bg;
   color: $white-text;
+  font-size: 16px;
+  line-height: 130%;
   width: 340px;
-  padding: 28px 0;
-  margin: 48px auto 0;
+  padding: 24px 0;
+  margin: 36px auto 0;
 
   @include media-mobile {
+    margin-top: 30px;
     width: 240px;
   }
 }
 
-.login p {
-  @include reset-text-slyle;
-  @include small-plain-text;
-  margin-top: 20px;
+.form__button--login:hover {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.login a:last-of-type:not(.login__field:last-of-type a) {
-  margin-left: 10px;
+.form__button--login:active {
+  animation: shadow-inset-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.form p {
+  @include reset-text-slyle;
+  @include small-plain-text;
+  margin-top: 14px;
+}
+
+.form a:last-of-type:not(.form__field:last-of-type a) {
   color: $dark-grey-text;
 
   @include media-mobile {
@@ -111,9 +201,19 @@
   }
 }
 
-.login__field:last-of-type a {
+.form a:last-of-type:not(.form__field:last-of-type a):hover {
+  color: $golden-text;
+}
+
+.form a:last-of-type:not(.form__field:last-of-type a):active {
+  color: $golden-text;
+  opacity: 0.5;
+}
+
+.form__field:last-of-type a {
   position: absolute;
-  bottom: -30px;
+  font-size: 12px;
+  bottom: -23px;
   right: 0;
   width: 60%;
   text-align: right;
@@ -124,7 +224,16 @@
   }
 }
 
-.login__popup--open {
+.form__field:last-of-type a:active {
+  color: $dark-grey-text;
+}
+
+.form__field:last-of-type a:hover {
+  color: $dark-grey-text;
+  transform: scale(0.9);
+}
+
+.form__popup--open {
   margin-top: 0;
   position: absolute;
   width: 100%;
@@ -134,4 +243,34 @@
   right: 0;
   left: 0;
   background-color: $primary-white-bg;
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes shadow-inset-center {
+  0% {
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: inset 0 0 14px 0 rgba(0, 0, 0, 0.5);
+  }
 }

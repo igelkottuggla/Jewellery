@@ -1,5 +1,7 @@
 .subscription {
-  width: 42.74%;
+  @include media-desktop {
+    width: 42.74%;
+  }
 
   @include media-tablet {
     width: 82.92%;
@@ -36,7 +38,10 @@
 
 .subscription__form {
   position: relative;
-  margin-top: 26px;
+
+  @include media-desktop {
+    margin-top: 26px;
+  }
 
   @include media-tablet {
     margin-top: 27px;
