@@ -227,7 +227,7 @@
 
   if (slider) {
     // eslint-disable-next-line
-    let swiper = new Swiper(".slider", {
+    let swiper = new Swiper('.slider', {
       speed: 700,
       direction: 'horizontal',
       loop: true,
@@ -251,8 +251,8 @@
           pagination: {
             type: 'fraction',
             renderFraction: function (currentClass, totalClass, index, total) {
-              return `<span class="swiper-pagination-bullet ${currentClass}">${index}
-                  </span> <span> of </span> <span class="swiper-pagination-bullet ${totalClass}"> ${total}</span>`;
+              return `<span class='swiper-pagination-bullet ${currentClass}'>${index}
+                  </span> <span> of </span> <span class='swiper-pagination-bullet ${totalClass}'> ${total}</span>`;
             },
           },
         },
@@ -265,7 +265,7 @@
           pagination: {
             type: 'bullets',
             renderBullet: function (index) {
-              return `<span class="dot swiper-pagination-bullet">${
+              return `<span class='dot swiper-pagination-bullet'>${
                 index + 1
               }</span>`;
             },
@@ -280,7 +280,7 @@
           pagination: {
             type: 'bullets',
             renderBullet: function (index) {
-              return `<span class="dot swiper-pagination-bullet">${
+              return `<span class='dot swiper-pagination-bullet'>${
                 index + 1
               }</span>`;
             },
