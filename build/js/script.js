@@ -226,7 +226,7 @@
 
   if (slider) {
     // eslint-disable-next-line
-    let swiper = new Swiper(".slider", {
+    let swiper = new Swiper('.slider', {
       speed: 700,
       direction: 'horizontal',
       loop: true,
