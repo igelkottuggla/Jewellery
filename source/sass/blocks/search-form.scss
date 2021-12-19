@@ -104,20 +104,20 @@
 
 @include media-tablet {
   .header--opened .search-form {
-    margin-top: 33px;
+    margin-top: 39px;
   }
 
   .header--no-js .search-form {
-    margin-top: 32px;
+    margin-top: 39px;
   }
 }
 
 @include media-mobile {
   .header--no-js .search-form {
-    margin-top: 22px;
+    margin-top: 29px;
   }
 
   .header--opened .search-form {
-    margin-top: 22px;
+    margin-top: 29px;
   }
 }

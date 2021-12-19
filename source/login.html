@@ -149,7 +149,12 @@
 
     <main>
       <section class="login wrapper">
-        <form method="GET" class="login__form form">
+        <h1 class="visually-hidden">Login form</h1>
+        <form
+          method="GET"
+          class="login__form form"
+          action="https://echo.htmlacademy.ru"
+        >
           <button
             class="form__button button form__button--close"
             aria-label="Close form"
@@ -164,6 +169,7 @@
                   type="email"
                   name="user-email"
                   placeholder="Your E-mail"
+                  required
               /></label>
             </div>
 
@@ -171,11 +177,11 @@
               <label aria-label="Your password"
                 ><input
                   id="user-password"
-                  type="text"
+                  type="password"
                   name="user-password"
                   placeholder="Password"
+                  required
               /></label>
-
               <a href="#">Forgot your password?</a>
             </div>
           </fieldset>

@@ -27,6 +27,7 @@
   padding: 28px 0;
   font-size: 16px;
   line-height: 130%;
+  transition: $basic-transition;
 
   @include media-desktop {
     display: none;
@@ -44,6 +45,17 @@
   @include media-mobile {
     margin-bottom: 39px;
   }
+}
+
+.catalog__button--toggle-filter:hover {
+  background-color: $primary-white-bg;
+  outline: 1px solid $primary-golden-bg;
+  color: $black-text;
+}
+
+.catalog__button--toggle-filter:active {
+  transform: scale(0.98);
+  opacity: 0.5;
 }
 
 .catalog__filter {

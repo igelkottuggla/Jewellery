@@ -656,6 +656,7 @@
                 id="email"
                 placeholder="Your E-mail"
                 autocomplete="off"
+                required
               />
             </label>
             <button type="submit" class="subscription__button button">
@@ -771,7 +772,11 @@
     <!-- Класс popup--no-js: реализация работы сайта без  включенного js (переход на отдельную страницу с логином)
     visually-hidden + popup--no-js: реализация открытия/закрытия пункта при подключенном js -->
     <div class="popup visually-hidden popup--no-js">
-      <form method="GET" class="popup__form form">
+      <form
+        method="GET"
+        class="popup__form form"
+        action="https://echo.htmlacademy.ru"
+      >
         <button
           class="form__button button form__button--close"
           aria-label="Close form"
@@ -786,6 +791,7 @@
                 type="email"
                 name="user-email"
                 placeholder="Your E-mail"
+                required
             /></label>
           </div>
 
@@ -793,9 +799,10 @@
             <label aria-label="Your password"
               ><input
                 id="user-password"
-                type="text"
+                type="password"
                 name="user-password"
                 placeholder="Password"
+                required
             /></label>
 
             <a href="#">Forgot your password?</a>

@@ -18,33 +18,21 @@
     return false;
   }
 
-  const showPopup = () => {
-    popup.classList.remove('visually-hidden');
-    document.body.classList.add('overflow-hidden');
-    emailInput.focus();
-  };
-
-  LoginBtns.forEach((button) => {
-    button.href = '#';
-    button.addEventListener('click', () => {
-      showPopup();
-      tabIndexRestoreFunctions = Array.prototype.filter
-        .call(
-            htmlAllCollection,
-            (descendant) =>
-              descendant.tabIndex > -1 && !isDescendant(popup, descendant)
-        )
-        .map((descendant) => {
-          var oldTabIndex = descendant.tabIndex;
-          descendant.tabIndex = -1;
-          return () => (descendant.tabIndex = oldTabIndex);
-        });
-    });
-  });
-
   popup.classList.remove('popup--no-js');
 
   if (popup) {
+    const showPopup = () => {
+      emailInput.focus();
+      popup.classList.remove('visually-hidden');
+      document.body.style.overflowY = 'hidden';
+    };
+
+    const hidePopup = () => {
+      popup.classList.add('visually-hidden');
+      document.body.style.overflowY = 'visible';
+      tabIndexRestoreFunctions.forEach((f) => f());
+      tabIndexRestoreFunctions = null;
+    };
     loginBtn.addEventListener('click', () => {
       const popupUserInfo = {
         email: emailInput.value,
@@ -53,12 +41,23 @@
       localStorage.setItem('popup-user', JSON.stringify(popupUserInfo));
     });
 
-    const hidePopup = () => {
-      popup.classList.add('visually-hidden');
-      document.body.classList.remove('overflow-hidden');
-      tabIndexRestoreFunctions.forEach((f) => f());
-      tabIndexRestoreFunctions = null;
-    };
+    LoginBtns.forEach((button) => {
+      button.href = '#';
+      button.addEventListener('click', () => {
+        showPopup();
+        tabIndexRestoreFunctions = Array.prototype.filter
+          .call(
+              htmlAllCollection,
+              (descendant) =>
+                descendant.tabIndex > -1 && !isDescendant(popup, descendant)
+          )
+          .map((descendant) => {
+            var oldTabIndex = descendant.tabIndex;
+            descendant.tabIndex = -1;
+            return () => (descendant.tabIndex = oldTabIndex);
+          });
+      });
+    });
 
     closePopup.addEventListener('click', (event) => {
       event.preventDefault();
@@ -227,7 +226,7 @@
 
   if (slider) {
     // eslint-disable-next-line
-    let swiper = new Swiper('.slider', {
+    let swiper = new Swiper(".slider", {
       speed: 700,
       direction: 'horizontal',
       loop: true,

@@ -428,7 +428,7 @@
 
           <form method="post" action="https://echo.htmlacademy.ru" class="subscription__form">
             <label aria-label="Your email">
-              <input type="email" name="email" id="email" placeholder="Your E-mail" autocomplete="off">
+              <input type="email" name="email" id="email" placeholder="Your E-mail" autocomplete="off" required="">
             </label>
             <button type="submit" class="subscription__button button">
               Sign Up
@@ -507,17 +507,17 @@
     <!-- Класс popup--no-js: реализация работы сайта без  включенного js (переход на отдельную страницу с логином)
     visually-hidden + popup--no-js: реализация открытия/закрытия пункта при подключенном js -->
     <div class="popup visually-hidden popup--no-js">
-      <form method="GET" class="popup__form form">
+      <form method="GET" class="popup__form form" action="https://echo.htmlacademy.ru">
         <button class="form__button button form__button--close" aria-label="Close form"></button>
         <h2>Log In</h2>
 
         <fieldset>
           <div class="form__field">
-            <label aria-label="Your email"><input id="user-email" type="email" name="user-email" placeholder="Your E-mail"></label>
+            <label aria-label="Your email"><input id="user-email" type="email" name="user-email" placeholder="Your E-mail" required=""></label>
           </div>
 
           <div class="form__field">
-            <label aria-label="Your password"><input id="user-password" type="text" name="user-password" placeholder="Password"></label>
+            <label aria-label="Your password"><input id="user-password" type="password" name="user-password" placeholder="Password" required=""></label>
 
             <a href="#">Forgot your password?</a>
           </div>

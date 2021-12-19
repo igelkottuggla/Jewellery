@@ -12,6 +12,7 @@
 
   .header--no-js .add-info__list {
     @include reset-list-slyle;
+    width: 100%;
     font-size: 18px;
     line-height: 23px;
     color: $partial-opacity-white-text;
@@ -20,6 +21,14 @@
   .header--no-js .add-info__item {
     margin-bottom: 30px;
     transition: $basic-transition;
+  }
+
+  .header--no-js a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    cursor: pointer;
   }
 
   .header--no-js .add-info__item:last-of-type {
@@ -43,6 +52,7 @@
 
   .header--opened .add-info__list {
     @include reset-list-slyle;
+    width: 100%;
     font-size: 18px;
     line-height: 23px;
     color: $partial-opacity-white-text;
@@ -51,6 +61,15 @@
   .header--opened .add-info__item {
     margin-bottom: 20px;
     transition: $basic-transition;
+    width: 100%;
+  }
+
+  .header--opened a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    cursor: pointer;
   }
 
   .header--opened .add-info__item:hover {
