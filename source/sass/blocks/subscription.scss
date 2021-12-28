@@ -40,7 +40,7 @@
   position: relative;
 
   @include media-desktop {
-    margin-top: 29px;
+    margin-top: 28px;
   }
 
   @include media-tablet {
@@ -102,7 +102,7 @@
   transform: translateY(-50%);
   width: 30%;
   color: $white-text;
-  padding: 13px 0 11px;
+  padding: 13px 0 10px;
   border: 0;
   transition: $basic-transition;
   border-bottom: 1px solid $border-white-color;
@@ -137,4 +137,3 @@
   position: absolute;
   color: $error-color;
 }
-

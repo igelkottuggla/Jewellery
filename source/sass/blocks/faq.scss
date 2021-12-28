@@ -47,7 +47,7 @@
   transition: $basic-transition;
 
   @include media-desktop {
-    padding: 43px 50px 50px 43px;
+    padding: 43px 50px 49px 43px;
   }
 
   @include media-tablet {
@@ -55,7 +55,6 @@
   }
 
   @include media-mobile {
-    padding-right: 37px;
     font-size: 16px;
     line-height: 22px;
     padding: 17px 78px 20px 25px;
@@ -115,7 +114,6 @@
     margin-top: -50px;
     padding: 0 0 45px 50px;
   }
-
 }
 
 .faq__answer p {
@@ -138,7 +136,6 @@
   }
 
   @include media-mobile {
-    margin-top: -17px;
     padding: 0 0 20px 24px;
     font-size: 14px;
     line-height: 20px;

@@ -224,6 +224,7 @@
       background-repeat: no-repeat;
     }
   }
+
   @include media-desktop {
     padding: 92px 0 94px;
   }
@@ -245,7 +246,7 @@
 .hero--catalog p {
   font-size: 22px;
   line-height: 29px;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .no-webp .hero--catalog {

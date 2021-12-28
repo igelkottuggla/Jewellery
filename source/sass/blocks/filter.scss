@@ -79,10 +79,6 @@
   overflow: hidden;
 }
 
-// .filter__option:not(:last-of-type) {
-//   margin-bottom: 5px;
-// }
-
 .filter__option:last-of-type:not(.filter__option--price) {
   margin-bottom: 18px;
 }
@@ -112,7 +108,7 @@
 }
 
 .filter__option input:focus {
-  outline: 2px solid #444;
+  outline: 2px solid $dark-grey;
 }
 
 .filter__control label {

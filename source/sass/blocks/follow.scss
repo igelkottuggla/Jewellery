@@ -39,7 +39,7 @@
     grid-template-columns: repeat(4, max-content);
     column-gap: 27px;
     row-gap: 34px;
-    margin-top: 62px;
+    margin-top: 59px;
   }
 
   @include media-tablet {
@@ -74,7 +74,6 @@
 
 .follow__pic:not(:nth-of-type(7n + 2)) img {
   @include media-mobile {
-    height: unset;
     max-height: 247px;
     object-fit: cover;
     width: 100%;

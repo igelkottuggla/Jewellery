@@ -1,4 +1,5 @@
 .latest {
+  position: relative;
   margin-top: 121px;
   text-align: center;
 
@@ -26,10 +27,6 @@
   }
 }
 
-.latest {
-  position: relative;
-}
-
 .latest__button {
   position: absolute;
   width: 100%;
@@ -43,7 +40,7 @@
 
   @include media-tablet {
     top: 40px;
-     width: 50px;
+    width: 50px;
     height: 17px;
   }
 
