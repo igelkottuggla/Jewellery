@@ -9,7 +9,11 @@
     width: 100%;
     background-color: $border-golden-color;
     left: 0;
-    bottom: 0;
+    bottom: 1px;
+
+    @include media-tablet {
+      bottom: -3px;
+    }
 
     @include media-mobile {
       bottom: -2px;

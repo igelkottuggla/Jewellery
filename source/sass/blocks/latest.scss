@@ -26,37 +26,29 @@
   }
 }
 
-.latest__track {
+.latest {
   position: relative;
 }
 
-.latest__buttons {
+.latest__button {
   position: absolute;
   width: 100%;
   height: 13px;
 
   @include media-desktop {
-    top: -108px;
-  }
-
-  @include media-tablet {
-    top: -99px;
-  }
-
-  @include media-mobile {
-    display: none;
-  }
-}
-
-.latest__button {
-  @include media-desktop {
+    top: 42px;
     width: 38px;
     height: 13px;
   }
 
   @include media-tablet {
-    width: 50px;
+    top: 40px;
+     width: 50px;
     height: 17px;
+  }
+
+  @include media-mobile {
+    display: none;
   }
 }
 
@@ -75,6 +67,14 @@
   background-image: url("../img/svg/arr-long-left-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include media-desktop {
+    left: 14px;
+  }
+
+  @include media-tablet {
+    left: 43px;
+  }
 }
 
 .latest__button--next {
@@ -84,4 +84,12 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
+
+  @include media-desktop {
+    right: 14px;
+  }
+
+  @include media-tablet {
+    right: 43px;
+  }
 }

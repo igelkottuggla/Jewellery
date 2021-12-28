@@ -118,6 +118,7 @@
 
   @include media-mobile {
     justify-content: space-between;
+    width: 50px;
   }
 }
 
@@ -181,4 +182,8 @@ button.swiper-pagination-bullet {
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 6px;
+
+  @include media-mobile {
+    margin: 0;
+  }
 }

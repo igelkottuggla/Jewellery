@@ -5,21 +5,54 @@
   color: $light-grey-text;
   background-color: $primary-beige-bg;
 
+
   @include media-desktop {
     padding: 194px 45px 54px;
     width: 430px;
+    background-image: url("../img/login-popup/popup-bg@1x.png");
+    background-size: 100% 138px;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-size: 100% 138px;
+      background-image: url("../img/login-popup/popup-bg@2x.png");
+      background-position: top;
+      background-repeat: no-repeat;
+    }
   }
 
   @include media-tablet {
-    padding: 80px 51px 54px;
+    padding: 198px 51px 54px;
     width: 442px;
+    background-image: url("../img/login-popup/popup-bg@1x.png");
+    background-size: 100% 138px;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-size: 100% 138px;
+      background-image: url("../img/login-popup/popup-bg@2x.png");
+      background-position: top;
+      background-repeat: no-repeat;
+    }
   }
 
   @include media-mobile {
     margin: 50px auto;
     padding: 121px 15px 39px;
     width: 270px;
+    background-image: url("../img/login-popup/popup-bg@2x.png");
     background-size: 100% 84px;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../img/login-popup/popup-bg@2x.png");
+      background-size: 100% 84px;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
   }
 }
 

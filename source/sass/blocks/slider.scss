@@ -27,6 +27,12 @@
   }
 }
 
+.slider__slide:first-of-type h3 {
+  @include media-tablet {
+    padding-left: 10px;
+  }
+}
+
 .slider__slide:hover {
   filter: drop-shadow(10px 5px 16px $basic-golden-shadow);
   transform: scale(1.01);
@@ -83,6 +89,6 @@
 
   @include media-mobile {
     margin: 31px auto 0;
-    width: 70px;
+    width: 50px;
   }
 }

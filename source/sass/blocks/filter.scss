@@ -12,16 +12,16 @@
 }
 
 .filter__button--options {
+  padding: 23px 22px 23px 23px;
   position: relative;
   text-align: left;
-  margin-bottom: 19px;
 
   &::after {
     position: absolute;
     content: "";
     top: 50%;
-    transform: translateY(-50%);
-    right: 0;
+    transform: translateY(-78%);
+    right: 24px;
     width: 15px;
     height: 8px;
     background-image: url("../img/svg/arr-long-down-icon.svg");
@@ -46,8 +46,13 @@
   background-position: center center;
 }
 
+.filter__control--active {
+  padding-bottom: 8px;
+}
+
 .filter fieldset {
-  padding: 23px 22px 5px 23px;
+  margin: 0;
+  padding: 0;
   border: 1px solid $border-golden-color;
 }
 
@@ -57,6 +62,8 @@
 
 .filter__option {
   display: none;
+  padding-left: 24px;
+  margin-top: -2px;
 }
 
 .filter__option input {
@@ -72,9 +79,9 @@
   overflow: hidden;
 }
 
-.filter__option:not(:last-of-type) {
-  margin-bottom: 5px;
-}
+// .filter__option:not(:last-of-type) {
+//   margin-bottom: 5px;
+// }
 
 .filter__option:last-of-type:not(.filter__option--price) {
   margin-bottom: 18px;
@@ -104,8 +111,16 @@
   color: $light-grey-text;
 }
 
+.filter__option input:focus {
+  outline: 2px solid #444;
+}
+
 .filter__control label {
   position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
   padding-left: 35px;
   cursor: pointer;
   transition: $basic-transition;
@@ -170,10 +185,21 @@
   position: absolute;
   background-color: $primary-beige-bg;
   height: 1px;
-  bottom: 22px;
-  left: 0;
-  width: 100%;
+  bottom: 25px;
+  left: 25px;
+  width: 200px;
+  margin: 0 auto;
   z-index: 3;
+
+  @include media-tablet {
+    width: 300px;
+    left: 67px;
+  }
+
+  @include media-mobile {
+    left: 20%;
+    width: 62%;
+  }
 
   &::before {
     position: absolute;
@@ -183,26 +209,40 @@
     bottom: 0;
     left: 23%;
     width: 59%;
+
+    @include media-tablet {
+      width: 65%;
+    }
+
+    @include media-mobile {
+      left: 18%;
+      width: 67%;
+    }
   }
 }
 
+.filter__price-progress label {
+  margin-bottom: 13px;
+}
+
 .filter__min-price {
-  left: 22%;
-  top: 0;
+  left: 28%;
+  top: -3px;
 }
 
 .filter__max-price {
-  top: 0;
-  right: 18%;
+  top: -3px;
+  right: 24%;
 }
 
 .filter__price-output p:first-of-type {
-  margin-right: 74px;
-  margin-left: 10px;
+  margin-right: 72px;
+  margin-left: 14px;
 }
 
 .filter__option--price {
-  margin-bottom: 11px;
+  margin-bottom: 7px;
+  padding-left: 0;
 }
 
 .catalog--no-js .catalog__button--toggle-filter {
@@ -314,6 +354,7 @@
   @include media-mobile {
     width: 90%;
     height: 100%;
+    max-width: 439px;
     min-height: 736px;
     top: 76px;
     left: 50%;
